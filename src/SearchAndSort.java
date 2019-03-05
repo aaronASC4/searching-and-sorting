@@ -17,15 +17,15 @@ public class SearchAndSort {
 		int target = 0; 
 		
 		System.out.println("What algorithm would you like to execute? "); 
-		String algorithm = in.nextLine().toLowerCase(); 
+		String algo = in.nextLine().toLowerCase(); 
 		
-		if (algorithm.equals("linear") || algorithm.equals("binary")) {
+		if (algo.equals("linear") || algo.equals("binary")) {
 			System.out.println("What would the target value be? ");
 			target = in.nextInt();
 			in.nextLine(); 
 		}
 		
-		else if (algorithm.equals("quit")) {
+		else if (algo.equals("quit")) {
 			System.exit(0);
 		}
 		
@@ -38,11 +38,6 @@ public class SearchAndSort {
 		System.out.println("Enter the data separated by commas: ");
 		String enteredData = in.nextLine(); 
 		
-		/**
-		 * list1 for integer array
-		 * list3 for integer arraylist
-		 * list4 for string arraylist
-		 */
 		
 		if (storage.equals("array")) {
 			if (datatype.equals("integer")) {
@@ -52,7 +47,7 @@ public class SearchAndSort {
 		            ints[i] = Integer.parseInt(list1[i]);
 				System.out.println(Arrays.toString(ints));
 				
-				switch (algorithm) {
+				switch (algo) {
 				case "bubble":
 					System.out.println("Bubble Sort: " + Arrays.toString(search.bubble(ints)));
 					break; 
@@ -77,7 +72,7 @@ public class SearchAndSort {
 				String[] strings = enteredData.split(",");
 				System.out.println(Arrays.toString(strings));
 				
-				switch (algorithm) {
+				switch (algo) {
 				case "bubble":
 					System.out.println("Bubble Sort: " + Arrays.toString(search.bubble(strings)));
 					break; 
@@ -108,7 +103,7 @@ public class SearchAndSort {
 				}
 				System.out.println(Arrays.toString(strings));
 				
-				switch (algorithm) {
+				switch (algo) {
 				case "bubble":
 					System.out.println("Bubble Sort: " + search.bubble(list3));
 					break; 
@@ -138,7 +133,7 @@ public class SearchAndSort {
 				}
 				System.out.println(Arrays.toString(strings)); 
 				
-				switch (algorithm) {
+				switch (algo) {
 				case "bubble":
 					System.out.println("Bubble Sort: " + search.bubble(false, list4));
 					break; 
